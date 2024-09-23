@@ -118,3 +118,7 @@ npx webpack serve
 ```
 This will start a local development server and allow you to see your changes live.
 
+## Conclusion
+
+The project demonstrates basic p5.js functionality, tracking ball collisions with the edges and corners of the canvas. By using Webpack, we can bundle the JavaScript for production, keeping the project clean and optimized.
+
