@@ -49,3 +49,38 @@ npm init -y
 ```bash
 npm install --save-dev webpack webpack-cli
 ```
+### 2. Setup Webpack Configuration
+
+Create a webpack.config.js file in the root directory:
+
+```javascript
+const path = require('path');
+
+module.exports = {
+  entry: './sketch.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+  },
+};
+```
