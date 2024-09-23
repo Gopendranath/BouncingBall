@@ -84,3 +84,37 @@ module.exports = {
   },
 };
 ```
+### 3. Update index.html
+
+Modify your index.html to reference the bundled file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouncing Ball</title>
+  </head>
+  <body>
+    <script src="./bundle.js"></script>
+  </body>
+</html>
+```
+### 4. Bundle the Project
+
+Run the following command to create the bundle.js file:
+
+```bash
+npx webpack
+```
+Webpack will generate a dist folder containing the index.html and bundle.js. You can now serve this folder to run the project.
+
+### 5. Running the Webpack Dev Server
+
+To run the project using Webpack's development server, use:
+```bash
+npx webpack serve
+```
+This will start a local development server and allow you to see your changes live.
+
