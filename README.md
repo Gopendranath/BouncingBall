@@ -45,4 +45,7 @@ In your project directory, run:
 
 ```bash
 npm init -y
+```
+```bash
 npm install --save-dev webpack webpack-cli
+```
